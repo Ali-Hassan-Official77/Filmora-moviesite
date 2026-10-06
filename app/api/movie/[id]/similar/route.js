@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-
+export const runtime = 'edge';
 const BASE_URL = process.env.TMDB_BASE_URL || "https://api.themoviedb.org/3";
 const TOKEN = process.env.API_ACCESS_TOKEN;
 

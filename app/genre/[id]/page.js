@@ -2,7 +2,7 @@ import { tmdb } from "@/lib/tmdb";
 import MovieGrid from "@/components/MovieGrid";
 
 export const revalidate = 3600;
-
+export const runtime = 'edge';
 export default async function GenrePage({ params }) {
   const [genreList, movies] = await Promise.all([
     tmdb.genres(),

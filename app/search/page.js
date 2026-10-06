@@ -2,7 +2,7 @@ import { tmdb } from "@/lib/tmdb";
 import MovieGrid from "@/components/MovieGrid";
 
 export const revalidate = 0;
-
+export const runtime = 'edge';
 export async function generateMetadata({ searchParams }) {
   const q = searchParams?.q || "";
   return { title: q ? `"${q}" — MoonFlix` : "Search — MoonFlix" };

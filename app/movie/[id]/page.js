@@ -8,6 +8,7 @@ import TrailerButton from "@/components/TrailerButton";
 import LikeButton from "@/components/LikeButton";
 import Reveal from "@/components/Reveal";
 export const revalidate=1800;
+export const runtime = 'edge';
 export async function generateMetadata({params}){try{const m=await tmdb.details(params.id);return{title:`${m.title} — MoonFlix`,description:m.overview?.slice(0,155)}}catch{return{title:"MoonFlix"}}}
 export default async function MovieDetailPage({params}){
  let movie; try{movie=await tmdb.details(params.id)}catch{notFound()}

@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Providers } from "@/components/Providers";
-
+export const runtime = 'edge';
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
